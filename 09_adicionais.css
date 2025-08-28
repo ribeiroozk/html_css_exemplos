@@ -2,7 +2,7 @@
 
 body {
     font-family: Georgia, serif;
-    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    background: linear-gradient(45deg, #00198a, #f9004f);
     padding: 30px;
     line-height: 1.8;
 }
@@ -10,11 +10,42 @@ body {
 h1 {
     text-align: center;
     color: #2c3e50;
-    animation: fadeIn 2s ease-in; /* Animação de entrada */
+    animation: rotate3d 2s ease-in; 
+    /* Animação de entrada */
+    animation: rainbow 2s linear infinite,
+         rotate3d 2s linear infinite;
+}
 }
 
 /* === KEYFRAMES (ANIMAÇÕES) === */
 
+
+@keyframes fadein {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+/* Rotação do texto */
+@keyframes rotate3d {
+    0% {transform: rotateX(0deg) rotateY(0deg);}
+    25% {transform: rotateX(90deg) rotateY(0deg);}
+    50% {transform: rotateX(90deg) rotateY(90deg);}
+    75% {transform: rotateX(0deg) rotateY(90deg);}
+    100% {transform: rotateX(0deg) rotateY(0deg);}
+}
+
+/* Altera a cor do texto */
+
+@keyframes rainbow {
+    0% {color: red;}
+     0% {color: rgb(21, 0, 255);}
+    0% {color: rgb(238, 255, 0);}
+    0% {color: rgb(17, 255, 0);}
+    0% {color: rgb(255, 0, 187);}
+    0% {color: rgb(255, 0, 85);}
+    0% {color: rgba(173, 9, 228, 0.925);}
+
+}
 
 /* Continuar digitação (Aqui)  */
 

@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00ddfb 0%, #764ba2 100%);
     padding: 20px;
     min-height: 100vh; /* Altura mínima da viewport */
 }
@@ -14,6 +14,80 @@ h1 {
 }
 
 /* Container do formulário */
+.formulario {
+    background-color: #0d92ff;
+    max-width: 500px;
+    margin:  0 auto; /* Centraliza horizontalmente*/
+    padding:  30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px black;
+}
+ label {
+    color: #333;
+    font-weight: bold;
+    /* Transforma o elemento " Label" em um elemneto inline como o (Span ou <a>) mas com comportamento como block*/
+    display: inline-block; 
+    margin-bottom: 5px;
+ }
+input[type="Text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3;
+    /* Inclui padding (mantendo a largura) */
+    box-sizing: border-box;
+}
 
+/* Foco nos campos (focus) */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: nome; /* Remove a borda padrão */
+    border-color: #090cad;
+    background-color: #ffffff;
+}
+/* Radio e checkbox*/
+input [ type= "radio"]
+input [ type= "checkbox"] {
+    margin-right: 5px;
+    cursor: pointer-;
+}
+
+/* Permitir redimensionamento somente na vertical */
+textarea {
+    resize: vertical;
+}
+/* Estilos dos  Botões*/
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+/* Estilo do botão */
+.btn-enviar {
+    background-color: #0065fe;
+    color: #ddd;
+}
+.btn-enviar:hover {
+    background-color: #4d0081;
+    transform: translateY (-2px); /* Move para cima levemente*/
+}
+
+
+.btn-limpar {
+    background-color:#0065fe ;
+    color: #ffffff;
+}
 
 /* Continuar digitação (Aqui) */

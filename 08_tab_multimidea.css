@@ -62,3 +62,23 @@ h1, h2 {
 /* === ESTILIZANDO MULTIMÍDIA === */
 
 /* Container para vídeos e áudio */
+video, iframe, audio {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border-bottom: 0 4px 15px rgb(0,0,0,0.1);
+}
+.video-local {
+    max-width: 100%;
+    height: auto;
+}
+.video-youtube {
+    border: 3px solid red;
+}
+.player-audio {
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(90deg, red, #4ecdc4);
+    padding: 5px;
+}
+

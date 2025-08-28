@@ -1,140 +1,151 @@
-/* === PORTFÓLIO RESPONSIVO COMPLETO === */
+/* === DESAFIO TECHNEWS - PORTAL MODERNO === */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
-    color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0e27;
+  color: #e4e4e7;
+  line-height: 1.6;
 }
 
-/* === HEADER COM GRADIENT === */
-.header-principal {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    position: sticky; /* Header fixo ao rolar */
-    top: 0;
-    z-index: 100;
+/* Header com glassmorphism */
+.cabecalho {
+  background: linear-gradient(135deg, rgba(192,182,241,0.1), rgba(148,187,233,0.1));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.nav-menu ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Quebra linha em telas pequenas */
+.logo {
+  font-size: 36px;
+  background: linear-gradient(90deg, #6366f1, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 25px;
-    transition: all 0.3s;
+.tagline {
+  color: #94a3b8;
+  margin-top: 10px;
 }
 
-.nav-menu a:hover {
-    background: rgba(255,255,255,0.3);
-    transform: scale(1.1);
+/* Layout principal com Grid */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* === SEÇÕES === */
-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* Artigo com card moderno */
+.artigo-destaque {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s;
 }
 
-.foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #667eea;
+.artigo-destaque:hover {
+  transform: translateY(-5px);
 }
 
-.lista-habilidades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    list-style: none;
+.artigo-destaque h2 {
+  color: #60a5fa;
+  margin-bottom: 10px;
 }
 
-.lista-habilidades li {
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+.data {
+  color: #64748b;
+  font-size: 14px;
 }
 
-/* === TABELA RESPONSIVA === */
-.tabela-projetos {
-    width: 100%;
-    overflow-x: auto; /* Scroll horizontal em telas pequenas */
+.leia-mais {
+  margin-top: 15px;
+  cursor: pointer;
+  color: #f59e0b;
+  font-weight: bold;
 }
 
-.status-concluido { color: #27ae60; font-weight: bold; }
-.status-andamento { color: #f39c12; font-weight: bold; }
-
-/* === FORMULÁRIO === */
-.form-contato fieldset {
-    border: 2px solid #667eea;
-    border-radius: 10px;
-    padding: 20px;
+/* Seção de vídeo */
+.secao-video {
+  text-align: center;
 }
 
-.form-contato input,
-.form-contato select,
-.form-contato textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.video-embed {
+  border-radius: 15px;
+  border: 2px solid #6366f1;
+  margin-top: 15px;
 }
 
-.btn-submit {
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
+/* Newsletter com gradiente */
+.secao-newsletter {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  padding: 30px;
+  border-radius: 20px;
 }
 
-.btn-submit:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+.form-newsletter input,
+.form-newsletter select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  color: white;
 }
 
-/* === FOOTER === */
-.footer-principal {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 30px;
+.checkbox-container {
+  margin: 15px 0;
 }
 
-.footer-principal a {
-    color: #3498db;
+.btn-inscrever {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  color: White;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* === MEDIA QUERY - RESPONSIVIDADE === */
-@media (max-width: 768px) {
-    section { margin: 20px; padding: 20px; }
-    .nav-menu ul { flex-direction: column; }
-    .lista-habilidades { grid-template-columns: 1fr; }
+.btn-inscrever:hover {
+  transform: scale(1.05);
+}
+
+/* Footer minimalista */
+.rodape {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #64748b;
+}
+
+.rodape a {
+  color: #60a5fa;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .conteudo {
+    grid-template-columns: 2fr 1fr;
+  }
+  .artigo-destaque {
+    grid-column: span 2;
+  }
 }
